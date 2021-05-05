@@ -1,0 +1,22 @@
+<h3>TyreConnect</h3>
+
+<form [formGroup]="subTextForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label >
+          Enter Text
+        </label>
+        <input id="text" type="text" formControlName="text">
+    </div>
+    
+    <div>
+        <label>
+          Enter Subtext to Match
+        </label>
+        <input id="subtext" type="text" formControlName="subtext">
+    </div>
+    
+
+    <button class="button" type="submit">Match</button>
+  
+</form>
