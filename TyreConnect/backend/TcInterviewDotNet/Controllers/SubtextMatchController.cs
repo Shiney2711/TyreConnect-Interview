@@ -11,12 +11,6 @@ namespace TcInterviewDotNet.Controllers
     [Route("[controller]")]
     public class SubtextMatchController : ControllerBase
     {
-        private readonly ILogger<SubtextMatchController> _logger;
-
-        public SubtextMatchController(ILogger<SubtextMatchController> logger)
-        {
-            _logger = logger;
-        }
 
         [HttpGet]
         public SubtextMatch Get()
@@ -24,27 +18,37 @@ namespace TcInterviewDotNet.Controllers
             string text = HttpContext.Request.Query["text"].ToString();
             string subtext = HttpContext.Request.Query["subtext"].ToString();
 
-            if (text == null || subtext == null || text == "" || subtext == "" ) {
-                throw new ArgumentException("Please enter values for Text and Subtext");
-            } else if (text.Length < subtext.Length) {
-                throw new ArgumentException("Subtext cannot be shorter than Text");
-            }
+            CheckData(text, subtext);
+            List<int> indexes = GetMatchIndxs(text, subtext);
+            
+            return new SubtextMatch{
+                Text = text,
+                Subtext = subtext,
+                Indexes = indexes
+            };
+        }
 
+        public List<int> GetMatchIndxs(String text, String subtext) {
+            text = text.ToLower();
+            subtext = subtext.ToLower();
             List<int> indexes = new List<int>();
 
             for (int index = 0;; index += subtext.Length) {
                 index = text.IndexOf(subtext, index);
                 if (index == -1)
                     break;
-                Console.WriteLine(index);
                 indexes.Add(index);
             }
 
-            return new SubtextMatch{
-                Text = text,
-                Subtext = subtext,
-                Indexes = indexes
-            };
+            return indexes;
+        }
+
+        public void CheckData(String text, String subtext) {
+            if (text == null || subtext == null || text == "" || subtext == "" ) {
+                throw new ArgumentException("Please enter values for Text and Subtext");
+            } else if (text.Length < subtext.Length) {
+                throw new ArgumentException("Subtext cannot be shorter than Text");
+            }
         }
     }
 }

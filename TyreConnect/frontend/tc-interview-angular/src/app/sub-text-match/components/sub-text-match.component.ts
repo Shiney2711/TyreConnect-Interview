@@ -2,12 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 import { SubtextMatchService } from '../services/sub-text-match.service';
+import { SubtextMatch } from '../types/sub-text-match'
 
-interface SubtextMatch {
-  text: string,
-  subtext: string,
-  indexes: number[]
-}
 
 @Component({
   selector: 'app-sub-text-match',
@@ -43,15 +39,7 @@ export class SubtextMatchComponent implements OnInit {
     this.text = this.subtextForm.value.text
     this.subtext = this.subtextForm.value.subtext
 
-    if (this.text === null || this.subtext === null || this.text === '' || this.subtext === '' ) {
-      this.errMessage = "Please enter values for Text and Subtext"
-      this.gotData = false
-      this.gotError = true
-      return
-    } else if (this.text.length < this.subtext.length) {
-      this.errMessage = "Subtext cannot be shorter than Text"
-      this.gotData = false
-      this.gotError = true
+    if(this.checkInputErrors()) {
       return
     }
 
@@ -67,8 +55,11 @@ export class SubtextMatchComponent implements OnInit {
         }
       },
       err => {
-        console.log("error", err)
-        this.errMessage = err.error.split('at')[0]
+        try {
+          this.errMessage = err.error.split('at')[0]
+        } catch {
+          this.errMessage = "Cannot connect to server"
+        }        
         this.gotError = true
         this.gotData = false
       }
@@ -80,6 +71,23 @@ export class SubtextMatchComponent implements OnInit {
     this.gotError = false
     this.gotData = false
     this.noMatches = false
+    this.errMessage = ''
+  }
+
+  checkInputErrors() {
+    if (this.text === null || this.subtext === null || this.text === '' || this.subtext === '' ) {
+      this.errMessage = "Please enter values for Text and Subtext"
+      this.gotData = false
+      this.gotError = true
+      return true
+    } else if (this.text.length < this.subtext.length) {
+      this.errMessage = "Subtext cannot be shorter than Text"
+      this.gotData = false
+      this.gotError = true
+      return true
+    } else {
+      return false
+    }
   }
 
 }
