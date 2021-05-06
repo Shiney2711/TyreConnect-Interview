@@ -6,7 +6,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class SubTextMatchService {
+export class SubtextMatchService {
 
   constructor(private http: HttpClient) { }
 
@@ -14,6 +14,6 @@ export class SubTextMatchService {
     let params = new HttpParams();
     params = params.append('text', text);
     params = params.append('subtext', subtext);
-    return this.http.get('https://localhost:5001/WeatherForecast', { params: params })
+    return this.http.get('https://localhost:5001/SubtextMatch', { params: params })
   }
 }

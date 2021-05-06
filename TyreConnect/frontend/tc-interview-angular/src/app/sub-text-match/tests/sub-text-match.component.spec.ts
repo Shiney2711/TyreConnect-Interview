@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubTextMatchComponent } from './sub-text-match.component';
+import { SubtextMatchComponent } from './sub-text-match.component';
 
-describe('SubTextMatchComponent', () => {
-  let component: SubTextMatchComponent;
-  let fixture: ComponentFixture<SubTextMatchComponent>;
+describe('SubtextMatchComponent', () => {
+  let component: SubtextMatchComponent;
+  let fixture: ComponentFixture<SubtextMatchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubTextMatchComponent ]
+      declarations: [ SubtextMatchComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SubTextMatchComponent);
+    fixture = TestBed.createComponent(SubtextMatchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

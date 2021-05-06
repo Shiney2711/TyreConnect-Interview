@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SubTextMatchService } from './sub-text-match.service';
+import { SubtextMatchService } from './sub-text-match.service';
 
-describe('SubTextMatchService', () => {
-  let service: SubTextMatchService;
+describe('SubtextMatchService', () => {
+  let service: SubtextMatchService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SubTextMatchService);
+    service = TestBed.inject(SubtextMatchService);
   });
 
   it('should be created', () => {

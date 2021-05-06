@@ -4,12 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SubTextMatchComponent } from './sub-text-match/components/sub-text-match.component';
+import { SubtextMatchComponent } from './sub-text-match/components/sub-text-match.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SubTextMatchComponent
+    SubtextMatchComponent
   ],
   imports: [
     BrowserModule,

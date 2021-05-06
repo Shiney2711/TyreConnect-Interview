@@ -1,22 +1,40 @@
-<h3>TyreConnect</h3>
+<div class="background">
 
-<form [formGroup]="subTextForm" (ngSubmit)="onSubmit()">
+  <h2 class="text">TyreConnect</h2>
 
-    <div>
-        <label >
-          Enter Text
-        </label>
-        <input id="text" type="text" formControlName="text">
+  <form [formGroup]="subtextForm" (ngSubmit)="onSubmit()">
+
+    <div class="inputs">
+      <table class="inputs-table">
+        <tr>
+            <td class="input-row text">Enter Text:</td>
+            <td class="input-row"><input id="text" type="text" formControlName="text" (ngModelChange)="onChange()"></td>
+        </tr>
+        <tr>
+            <td class="input-row text">Enter Subtext to Match:</td>
+            <td class="input-row"><input id="subtext" type="text" formControlName="subtext" (ngModelChange)="onChange()"></td>
+        </tr>
+      </table>
     </div>
     
-    <div>
-        <label>
-          Enter Subtext to Match
-        </label>
-        <input id="subtext" type="text" formControlName="subtext">
-    </div>
     
-
-    <button class="button" type="submit">Match</button>
+    <button class="match-button" type="submit">Match</button>
   
-</form>
+  </form>
+
+  <div *ngIf="gotData" class="result">
+    <label>{{indexes.length}} Match<span *ngIf="indexes.length > 1">es</span> Found!</label><br>
+    <label>Text: {{text}}</label><br>
+    <label>Subtext: {{subtext}}</label><br>
+    <label>Indexes: {{indexes}}</label>
+  </div>
+
+  <div *ngIf="gotError" class="error">
+    Error! {{errMessage}}
+  </div>
+
+  <div *ngIf="noMatches" class="error">
+    No Matches Found :(
+  </div>
+</div>
+
