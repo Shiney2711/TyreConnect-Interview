@@ -6,7 +6,7 @@ Angular and .Net Core application that matches subtext strings in a larger text 
 1. clone repo
 2. cd TyreConnect-Interview\TyreConnect\backend\TcInterviewDotNet
 3. dotnet watch run
-4. the broweser will open to https://localhost:5001/swagger/index.html
+4. the browser will open to https://localhost:5001/swagger/index.html
 
 #### Run tests
 1. clone repo
@@ -16,10 +16,14 @@ Angular and .Net Core application that matches subtext strings in a larger text 
 ## Run backend locally 
 1. clone repo
 2. cd TyreConnect-Interview\TyreConnect\frontend\tc-interview-angular
-3. ng serve --open
-4. the broweser will open to http://localhost:4200/ (please note you may have to run Chrome with web security disabled e.g run chrome.exe --disable-web-security --user-data-dir="{some directory}" from Chrome's installation folder)
+3. npm install
+4. ng serve --open
+5. the browser will open to http://localhost:4200/ (please note you may have to run Chrome with web security disabled e.g run chrome.exe --disable-web-security --user-data-dir="{some directory}" from Chrome's installation folder)
 
 #### Run tests
 1. clone repo
 2. cd TyreConnect-Interview\TyreConnect\frontend\tc-interview-angular
-3. ng test
+3. npm install
+4. ng test
+
+TODO git ignore
