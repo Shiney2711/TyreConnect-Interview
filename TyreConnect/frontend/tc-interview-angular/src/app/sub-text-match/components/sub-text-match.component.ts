@@ -83,7 +83,7 @@ export class SubtextMatchComponent implements OnInit {
       this.gotError = true
       return true
     } else if (this.text.length < this.subtext.length) {
-      this.errMessage = "Subtext cannot be shorter than Text"
+      this.errMessage = "Subtext cannot be longer than Text"
       this.gotData = false
       this.gotError = true
       return true
