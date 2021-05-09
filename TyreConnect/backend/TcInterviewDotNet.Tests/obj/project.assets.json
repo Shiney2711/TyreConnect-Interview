@@ -6333,11 +6333,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet.Tests\\TcInterviewDotNet.Tests.csproj",
+      "projectUniqueName": "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet.Tests\\TcInterviewDotNet.Tests.csproj",
       "projectName": "TcInterviewDotNet.Tests",
-      "projectPath": "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet.Tests\\TcInterviewDotNet.Tests.csproj",
+      "projectPath": "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet.Tests\\TcInterviewDotNet.Tests.csproj",
       "packagesPath": "C:\\Users\\gbix9\\.nuget\\packages\\",
-      "outputPath": "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet.Tests\\obj\\",
+      "outputPath": "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gbix9\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6352,8 +6352,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj": {
-              "projectPath": "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj"
+            "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj": {
+              "projectPath": "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj"
             }
           }
         }
