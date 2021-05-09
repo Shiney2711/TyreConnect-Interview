@@ -28,6 +28,7 @@ namespace TcInterviewDotNet.Controllers
             };
         }
 
+        [NonAction]
         public List<int> GetMatchIndxs(String text, String subtext) {
             text = text.ToLower();
             subtext = subtext.ToLower();
@@ -43,6 +44,7 @@ namespace TcInterviewDotNet.Controllers
             return indexes;
         }
 
+        [NonAction]
         public void CheckData(String text, String subtext) {
             if (text == null || subtext == null || text == "" || subtext == "" ) {
                 throw new ArgumentException("Please enter values for Text and Subtext");

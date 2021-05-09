@@ -1,6 +1,6 @@
 <div class="background">
 
-  <h2 class="text">TyreConnect</h2>
+  <h2 class="text">TyreConnect's Amazing Subtext Matcher!</h2>
 
   <form [formGroup]="subtextForm" (ngSubmit)="onSubmit()">
 
@@ -11,29 +11,42 @@
             <td class="input-row"><input id="text" type="text" formControlName="text" (ngModelChange)="onChange()"></td>
         </tr>
         <tr>
-            <td class="input-row text">Enter Subtext to Match:</td>
+            <td class="input-row text">Enter Subtext:</td>
             <td class="input-row"><input id="subtext" type="text" formControlName="subtext" (ngModelChange)="onChange()"></td>
         </tr>
       </table>
     </div>
     
     
-    <button class="match-button" type="submit">Match</button>
+    <button class="match-button text" type="submit">Match</button>
   
   </form>
+  <div class="padding"></div>
+  <div *ngIf="gotData" class="result text">
 
-  <div *ngIf="gotData" class="result">
-    <label>{{indexes.length}} Match<span *ngIf="indexes.length > 1">es</span> Found!</label><br>
-    <label>Text: {{text}}</label><br>
-    <label>Subtext: {{subtext}}</label><br>
-    <label>Indexes: {{indexes}}</label>
+    <table class="inputs-table">
+      <tr class="result-row-title">
+          <label class="result-title result-heading">{{indexes.length}} Match<span *ngIf="indexes.length > 1">es</span> Found!</label>
+      </tr>
+      <tr class="result-row">
+          <label class="result-title">Text - </label>
+          <label>    {{text}}</label>
+      </tr>
+      <tr class="result-row">
+          <label class="result-title">Subtext - </label>
+          <label>    {{subtext}}</label>
+      </tr>
+      <tr class="result-row">
+          <label><span class="result-title">Index<span *ngIf="indexes.length > 1">es</span> - </span>    {{indexes}}</label>
+      </tr>
+    </table>
   </div>
 
-  <div *ngIf="gotError" class="error">
+  <div *ngIf="gotError" class="error text">
     Error! {{errMessage}}
   </div>
 
-  <div *ngIf="noMatches" class="error">
+  <div *ngIf="noMatches" class="error text">
     No Matches Found :(
   </div>
 </div>

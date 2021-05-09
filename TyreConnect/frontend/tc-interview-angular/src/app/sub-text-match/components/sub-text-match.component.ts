@@ -35,7 +35,6 @@ export class SubtextMatchComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('Values are', this.subtextForm.value);
     this.text = this.subtextForm.value.text
     this.subtext = this.subtextForm.value.subtext
 
@@ -46,6 +45,7 @@ export class SubtextMatchComponent implements OnInit {
     this.SubtextMatchService.getMatches(this.text, this.subtext)
     .subscribe(
       (data: SubtextMatch) => {
+        //TODO create logger service
         console.log("data", data)
         this.indexes = data.indexes
         if (this.indexes.length > 0) {
@@ -55,6 +55,8 @@ export class SubtextMatchComponent implements OnInit {
         }
       },
       err => {
+        //TODO create error handling service
+        //this is very janky
         try {
           this.errMessage = err.error.split('at')[0]
         } catch {
@@ -89,5 +91,4 @@ export class SubtextMatchComponent implements OnInit {
       return false
     }
   }
-
 }
