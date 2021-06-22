@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj": {}
+    "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj": {}
   },
   "projects": {
-    "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj": {
+    "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj",
+        "projectUniqueName": "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj",
         "projectName": "TcInterviewDotNet",
-        "projectPath": "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj",
+        "projectPath": "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\TcInterviewDotNet.csproj",
         "packagesPath": "C:\\Users\\gbix9\\.nuget\\packages\\",
-        "outputPath": "C:\\test\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\obj\\",
+        "outputPath": "C:\\TyreConnect-Interview\\TyreConnect\\backend\\TcInterviewDotNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gbix9\\AppData\\Roaming\\NuGet\\NuGet.Config"
